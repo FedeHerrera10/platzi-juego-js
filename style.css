@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+body{
+    background-color: #1D233B;
+}
+
+.header{
+    margin-top: 20px;
+    padding-left: 15px;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    color: rgb(202, 202, 202);
+}
+
+h2 {
+    margin-right: 5px;
+    max-height: 40px;
+    background-color: chocolate;
+}
+
+.container-main {
+    display: grid;
+    grid-template: .2fr .2fr .2fr / 80%;
+    justify-content: center;
+    align-items: center;
+    grid-gap: 15px;
+}
+
+.palabras, .container-buttons{
+    text-align: center;
+}
+
+
+.pista:active ,.container-buttons button:active{
+    border:1px solid oldlace;
+}
+
+.palabras-letras {
+    padding-left: 5px;
+    font-size: 45px;
+    color: white;
+}
+.palabras-letras span {
+    text-decoration: underline;
+}
+
+.span1::before{
+    content: '_';
+}
+.container-buttons {
+    justify-self:center;
+    border: 1px outset oldlace;
+    border-radius: 5px;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.container-buttons button {
+    min-height: 50px;
+    min-width: 50px;
+    margin: 8px 0;
+    background-color: chocolate;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    font-size:20px;
+    color: wheat;
+    
+}
+
+.container-img{
+    height: 250px;
+    width: 450px;
+    justify-self: center;
+}
+
+.container-img img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    
+}
+
+@media screen and (max-width:768px){
+
+    body{
+        background-color: crimson;
+    }
+
+    .header {
+        grid-template: 1fr 1.5fr/ 1fr ;
+        grid-gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+    h2,.palabras-letras {
+        font-size: 25px;
+        width: 200px;
+    }
+
+    .palabras,.palabras-letras{
+        justify-self: center;
+    }
+
+    .container-main {
+        display: grid;
+        grid-template: .3fr .1fr .3fr / 80%;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 15px;
+    }
+
+   .pista-btn button{
+       font-size: 15px;
+       height: 30px;
+   }
+}
+
+
+@media screen and (max-width:539px){
+    .container-main {
+        display: grid;
+        grid-template: .2fr .1fr 1fr / 80%;
+        grid-gap:5px;
+        min-width: 320px;
+    }
+    .container-img{
+        max-height: 200px;
+        max-width: 280px;
+        justify-self: center;
+    }
+
+    .container-buttons{
+        width: 100%;
+        min-width: 290px;
+        
+    }
+    .container-buttons button {
+        height: 30px;
+        width: 30px;
+    }
+
+   
+}
